@@ -20,6 +20,8 @@ xcodebuild -project PickleMyBallsWatch.xcodeproj -scheme "PickleMyBalls Watch" \
   CODE_SIGNING_ALLOWED=NO build
 ```
 
+If installation reports conflicting `WKWatchOnly` and `WKRunsIndependentlyOfCompanionApp` keys, confirm you have the latest checkout and run `Scripts/build-watch-simulator.sh` on your Mac. It checks the source plist, builds the included project into a fresh directory, and checks the generated app plist. It preserves a build log and reports the exact project and output paths. To also install and launch on a specific Watch simulator, pass its UUID as the script's only argument. The script keeps existing Xcode caches and simulator data intact. If the generated plist still contains the conflicting key, its reported path and build log identify the product to inspect.
+
 **Run on a Watch**
 
 Select a unique bundle identifier and your signing team in the **PickleMyBalls Watch** target's Signing & Capabilities pane. The project includes **HealthKit** and **Background Modes → Workout processing**. Use a team/provisioning profile that supports HealthKit. Enable Developer Mode on your paired Apple Watch, select it as the destination in Xcode, and run. Apple's device signing and distribution rules apply; the app uses no paid runtime services.
