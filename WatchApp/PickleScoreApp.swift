@@ -6,7 +6,7 @@ enum AppServices {
     static let workout = WorkoutCoordinator(client: HealthKitWorkoutClient())
 }
 
-final class ExtensionDelegate: NSObject, WKExtensionDelegate {
+final class ApplicationDelegate: NSObject, WKApplicationDelegate {
     func handleActiveWorkoutRecovery() {
         Task { @MainActor in await AppServices.workout.recover() }
     }
@@ -14,7 +14,7 @@ final class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
 @main
 struct PickleScoreApp: App {
-    @WKExtensionDelegateAdaptor(ExtensionDelegate.self) private var delegate
+    @WKApplicationDelegateAdaptor(ApplicationDelegate.self) private var delegate
     @State private var game = GameStore()
     @State private var workout = AppServices.workout
     @Environment(\.scenePhase) private var scenePhase

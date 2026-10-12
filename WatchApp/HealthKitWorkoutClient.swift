@@ -31,7 +31,7 @@ final class HealthKitWorkoutClient: NSObject, WorkoutClient {
     }
 
     func start(location: WorkoutLocation) async throws {
-        guard WKExtension.shared().applicationState == .active else {
+        guard WKApplication.shared().applicationState == .active else {
             throw WorkoutError("Open the app on your Watch before starting a workout.")
         }
         guard session == nil else { throw WorkoutError("A workout is already attached to this app.") }
