@@ -1,24 +1,28 @@
-# Pickle Score
+# PickleMyBalls Watch
 
 A standalone SwiftUI Apple Watch app for traditional pickleball scoring and an app-managed HealthKit workout. No iPhone app, account, network calls, backend, or third-party dependencies. Requires watchOS 10 or later and Xcode 16 or later (Xcode 26 recommended).
 
+**Find the project**
+
+Download this repository from GitHub using **Code → Download ZIP**, unzip it, and open **PickleMyBallsWatch.xcodeproj** inside the extracted folder. If you cloned it earlier, pull the latest changes first. Use this included project in Xcode.
+
 **Run on a simulator**
 
-1. Open `PickleScore.xcodeproj` in Xcode, select the **PickleScore** scheme, and install a watchOS simulator runtime in Xcode Settings → Components if needed.
+1. Open `PickleMyBallsWatch.xcodeproj` in Xcode, select the **PickleMyBalls Watch** scheme, and install a watchOS simulator runtime in Xcode Settings → Components if needed.
 2. Select an Apple Watch simulator and run. Scoring works without Health access. Use the gear button to edit names or choose singles/doubles and the opening side when starting a new game.
 3. Use **Workout → Start pickleball** to request Health permissions. Simulator sensor data and Activity credit do not represent a physical Watch.
 
 An unsigned simulator build can also be checked from the repository root:
 
 ```sh
-xcodebuild -project PickleScore.xcodeproj -scheme PickleScore \
+xcodebuild -project PickleMyBallsWatch.xcodeproj -scheme "PickleMyBalls Watch" \
   -sdk watchsimulator -destination 'generic/platform=watchOS Simulator' \
   CODE_SIGNING_ALLOWED=NO build
 ```
 
 **Run on a Watch**
 
-Select a unique bundle identifier and your signing team in the PickleScore target's Signing & Capabilities pane. The project includes **HealthKit** and **Background Modes → Workout processing**. Use a team/provisioning profile that supports HealthKit. Enable Developer Mode on your paired Apple Watch, select it as the destination in Xcode, and run. Apple's device signing and distribution rules apply; the app uses no paid runtime services.
+Select a unique bundle identifier and your signing team in the **PickleMyBalls Watch** target's Signing & Capabilities pane. The project includes **HealthKit** and **Background Modes → Workout processing**. Use a team/provisioning profile that supports HealthKit. Enable Developer Mode on your paired Apple Watch, select it as the destination in Xcode, and run. Apple's device signing and distribution rules apply; the app uses no paid runtime services.
 
 Start the workout while this app is open. Allow workout/active-energy writing and heart-rate/active-energy reading for full fitness integration. Workouts remain active when the wrist lowers, while navigating, and across game resets. **End & save workout** is a separate confirmed action. Saved workouts sync through Apple Health and appear in Fitness; Activity credit is determined by watchOS sensor measurements and permissions, and is not guaranteed for every elapsed minute. Denied permissions never disable scoring. A missing or stale heart-rate reading displays `— bpm`.
 
