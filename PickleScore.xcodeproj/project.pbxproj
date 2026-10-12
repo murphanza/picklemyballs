@@ -1,0 +1,43 @@
+// !$*UTF8*$!
+{
+archiveVersion = 1;
+classes = {};
+objectVersion = 56;
+objects = {
+0000000000000000000000C8 = {isa = PBXBuildFile; fileRef = 000000000000000000000064; };
+0000000000000000000000C9 = {isa = PBXBuildFile; fileRef = 000000000000000000000065; };
+0000000000000000000000CA = {isa = PBXBuildFile; fileRef = 000000000000000000000066; };
+0000000000000000000000CB = {isa = PBXBuildFile; fileRef = 000000000000000000000067; };
+0000000000000000000000CC = {isa = PBXBuildFile; fileRef = 000000000000000000000068; };
+0000000000000000000000CD = {isa = PBXBuildFile; fileRef = 000000000000000000000069; };
+0000000000000000000000CE = {isa = PBXBuildFile; fileRef = 00000000000000000000006A; };
+0000000000000000000000CF = {isa = PBXBuildFile; fileRef = 00000000000000000000006B; };
+0000000000000000000000D0 = {isa = PBXBuildFile; fileRef = 00000000000000000000006C; };
+000000000000000000000064 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/Core/Game.swift"; sourceTree = "<group>"; };
+000000000000000000000065 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/Core/GamePersistence.swift"; sourceTree = "<group>"; };
+000000000000000000000066 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/Core/WorkoutCoordinator.swift"; sourceTree = "<group>"; };
+000000000000000000000067 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WatchApp/ContentView.swift"; sourceTree = "<group>"; };
+000000000000000000000068 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WatchApp/GameStore.swift"; sourceTree = "<group>"; };
+000000000000000000000069 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WatchApp/HealthKitWorkoutClient.swift"; sourceTree = "<group>"; };
+00000000000000000000006A = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WatchApp/PickleScoreApp.swift"; sourceTree = "<group>"; };
+00000000000000000000006B = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "WatchApp/Assets.xcassets"; sourceTree = "<group>"; };
+00000000000000000000006C = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "WatchApp/PrivacyInfo.xcprivacy"; sourceTree = "<group>"; };
+00000000000000000000006D = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WatchApp/Info.plist"; sourceTree = "<group>"; };
+00000000000000000000006E = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchApp/PickleScore.entitlements"; sourceTree = "<group>"; };
+00000000000000000000000A = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pickle Score.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+000000000000000000000001 = {isa = PBXGroup; children = (000000000000000000000064, 000000000000000000000065, 000000000000000000000066, 000000000000000000000067, 000000000000000000000068, 000000000000000000000069, 00000000000000000000006A, 00000000000000000000006B, 00000000000000000000006C, 00000000000000000000006D, 00000000000000000000006E, 000000000000000000000002); sourceTree = "<group>"; };
+000000000000000000000002 = {isa = PBXGroup; children = (00000000000000000000000A); name = Products; sourceTree = "<group>"; };
+000000000000000000000003 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (0000000000000000000000C8, 0000000000000000000000C9, 0000000000000000000000CA, 0000000000000000000000CB, 0000000000000000000000CC, 0000000000000000000000CD, 0000000000000000000000CE); runOnlyForDeploymentPostprocessing = 0; };
+000000000000000000000004 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (0000000000000000000000CF, 0000000000000000000000D0); runOnlyForDeploymentPostprocessing = 0; };
+000000000000000000000005 = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+000000000000000000000006 = {isa = PBXNativeTarget; buildConfigurationList = 000000000000000000000008; buildPhases = (000000000000000000000003, 000000000000000000000005, 000000000000000000000004); buildRules = (); dependencies = (); name = PickleScore; productName = PickleScore; productReference = 00000000000000000000000A; productType = "com.apple.product-type.application"; };
+000000000000000000000007 = {isa = PBXProject; attributes = {BuildIndependentTargetsInParallel = YES; LastUpgradeCheck = 1600; TargetAttributes = {000000000000000000000006 = {CreatedOnToolsVersion = 16.0; SystemCapabilities = {com.apple.HealthKit = {enabled = 1; }; com.apple.BackgroundModes = {enabled = 1; }; }; }; }; }; buildConfigurationList = 000000000000000000000009; compatibilityVersion = "Xcode 14.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = (en, Base); mainGroup = 000000000000000000000001; productRefGroup = 000000000000000000000002; projectDirPath = ""; projectRoot = ""; targets = (000000000000000000000006); };
+000000000000000000000008 = {isa = XCConfigurationList; buildConfigurations = (000000000000000000000014, 000000000000000000000015); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+000000000000000000000009 = {isa = XCConfigurationList; buildConfigurations = (000000000000000000000016, 000000000000000000000017); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+000000000000000000000014 = {isa = XCBuildConfiguration; buildSettings = {ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; CODE_SIGN_ENTITLEMENTS = WatchApp/PickleScore.entitlements; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = WatchApp/Info.plist; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks"; MARKETING_VERSION = 1.0; PRODUCT_BUNDLE_IDENTIFIER = com.example.PickleScore; PRODUCT_NAME = "Pickle Score"; SDKROOT = watchos; SKIP_INSTALL = NO; SUPPORTED_PLATFORMS = "watchos watchsimulator"; SWIFT_EMIT_LOC_STRINGS = YES; SWIFT_STRICT_CONCURRENCY = complete; SWIFT_VERSION = 6.0; TARGETED_DEVICE_FAMILY = 4; WATCHOS_DEPLOYMENT_TARGET = 10.0; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; DEBUG_INFORMATION_FORMAT = dwarf; SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";}; name = Debug; };
+000000000000000000000015 = {isa = XCBuildConfiguration; buildSettings = {ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; CODE_SIGN_ENTITLEMENTS = WatchApp/PickleScore.entitlements; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = WatchApp/Info.plist; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks"; MARKETING_VERSION = 1.0; PRODUCT_BUNDLE_IDENTIFIER = com.example.PickleScore; PRODUCT_NAME = "Pickle Score"; SDKROOT = watchos; SKIP_INSTALL = NO; SUPPORTED_PLATFORMS = "watchos watchsimulator"; SWIFT_EMIT_LOC_STRINGS = YES; SWIFT_STRICT_CONCURRENCY = complete; SWIFT_VERSION = 6.0; TARGETED_DEVICE_FAMILY = 4; WATCHOS_DEPLOYMENT_TARGET = 10.0; SWIFT_OPTIMIZATION_LEVEL = "-O"; DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";}; name = Release; };
+000000000000000000000016 = {isa = XCBuildConfiguration; buildSettings = {CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; ENABLE_STRICT_OBJC_MSGSEND = YES; ENABLE_USER_SCRIPT_SANDBOXING = YES; GCC_C_LANGUAGE_STANDARD = gnu17; GCC_WARN_64_TO_32_BIT_CONVERSION = YES; GCC_WARN_UNDECLARED_SELECTOR = YES; SWIFT_VERSION = 6.0;}; name = Debug; };
+000000000000000000000017 = {isa = XCBuildConfiguration; buildSettings = {CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; ENABLE_STRICT_OBJC_MSGSEND = YES; ENABLE_USER_SCRIPT_SANDBOXING = YES; GCC_C_LANGUAGE_STANDARD = gnu17; GCC_WARN_64_TO_32_BIT_CONVERSION = YES; GCC_WARN_UNDECLARED_SELECTOR = YES; SWIFT_VERSION = 6.0;}; name = Release; };
+};
+rootObject = 000000000000000000000007;
+}
