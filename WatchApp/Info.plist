@@ -13,7 +13,6 @@
     <key>CFBundleVersion</key><string>$(CURRENT_PROJECT_VERSION)</string>
     <key>WKApplication</key><true/>
     <key>WKWatchOnly</key><true/>
-    <key>WKRunsIndependentlyOfCompanionApp</key><true/>
     <key>WKBackgroundModes</key><array><string>workout-processing</string></array>
     <key>NSHealthShareUsageDescription</key>
     <string>Show your heart rate and collect active energy during pickleball workouts you start here.</string>
